@@ -1,0 +1,6 @@
+{
+    "baseUrl": "https://ensekautomationcandidatetest.azurewebsites.net/",
+    "apiBaseUrl": "https://qacandidatetest.ensek.io/",
+    "testFiles": "**/*.feature",
+    "scrollBehavior": "bottom"
+}
