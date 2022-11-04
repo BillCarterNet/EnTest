@@ -7,14 +7,17 @@
 2. Click the "Contact" tab in the header
 
 **Expected results:-**
+
 The user is taken to a page akin to https://ensek.com/contact
 
 **Actual results:-**
+
 The user sees an error image
 
 Error is misspelt on the image
 
 **Note:-**
+
 This is different to clicking the "Sell energy" page which leads a maintenance page which presumably would be a better fit here
 
 Especially so as clicking "Contact" doesn't appear to display any actual error in the console or network tab of the dev tools
@@ -37,13 +40,16 @@ Especially so as clicking "Contact" doesn't appear to display any actual error i
 8. Observe the error message presented; "Passwords must have at least one non letter or digit character."
 
 **Expected results:-**
+
 The specified password criteria is correctly supplied to the user
 Passwords submitted matching the specified password criteria are accepted
 
 **Actual results:-**
+
 Passwords submitted matching the specified password criteria are not accepted
 
 **Note:-**
+
 It is suggested here that if the string:
 
 "Passwords must have at least one non letter or digit character."
@@ -71,14 +77,17 @@ The html is there but not constructed properly
 7. Observe the error message presented
 
 **Expected results:-**
+
 The registration completes and the user is taking them to a page notifying them off this
 
 Presumably they would also be logged in at this point (or invited to)
 
 **Actual results:-**
+
 Registration cannot be completed and results in an SQL connection error
 
 **Note:-**
+
 Unlike the Log in page where a message is displayed indicating there is no authentication the registration page has no such message
 
 **Screenshot:-**
@@ -95,9 +104,11 @@ Unlike the Log in page where a message is displayed indicating there is no authe
 4. Observe the user is taken to https://www.ensek.com/about
 
 **Expected results:-**
+
 All links within a given test environment lead to another page within that test environment
 
 **Actual results:-**
+
 The About page has a link to the production website
 
 
@@ -115,6 +126,7 @@ The About page has a link to the production website
     - Zero (this leads to a sale of zero)
 
 **Expected results:-**
+
 The user is only allowed to enter a meaningful quantity that would result in a sale
 
 All other entries should generate an appropriate error message (either on entry or on clicking "Buy")
@@ -122,6 +134,7 @@ All other entries should generate an appropriate error message (either on entry 
 The error message should be handled by the front end
 
 **Actual results:-**
+
 The lack of any validation leads to various error states
 
 
@@ -136,12 +149,15 @@ The lack of any validation leads to various error states
 5. E.g. each the "Name" field has an id="energyType_EnergyTypeId" rather than an actual EnergyTypeId
 
 **Expected results:-**
+
 Any html element on the page that has an id attribute has a unique value
 
 **Actual results:-**
+
 Many html elements share identical (unset) ids
 
 **Notes:-**
+
 This was discovered when automating the E2E test case and looking for attributes/selectors to use
 
 Whilst ids should always be unique and in many instance will suffice as selectors it is recommended to have specific data attributes for automation
@@ -162,9 +178,11 @@ E.g. `data-cy="energyTable_energyType_Gas"`
 4. Observe after "Thank you for your purchase of 1 units of Gas" there is no full stop before the next segment of the message "We have popped it in the post and it will be with you shortly." which does correctly have a full stop
 
 **Expected results:-**
+
 Any messages to the user are correctly formatted
 
 **Actual results:-**
+
 There is a full stop missing in the sale confirmation message
 
 **Screenshot:-**
@@ -185,9 +203,11 @@ There is a full stop missing in the sale confirmation message
 8. Observe the table is now no longer responsive and scrolls off the display
 
 **Expected results:-**
+
 The main table on the Buy Energy page is always responsive
 
 **Actual results:-**
+
 The main table on the Buy Energy page is not always responsive
 
 **Screenshot:-**
@@ -206,9 +226,11 @@ The main table on the Buy Energy page is not always responsive
 6. Observe the request fails with a 401 authentication error
 
 **Expected results:-**
+
 The provided authentication does allow use of endpoints that require it or authenticate requirements are removed from all end points
 
 **Actual results:-**
+
 The provided authentication does not allow use of endpoints that require it
 
 **Screenshot:-**
@@ -225,12 +247,15 @@ The provided authentication does not allow use of endpoints that require it
 4. Observe the end point returns a 500 error
 
 **Expected results:-**
+
 The GET /ENSEK/orders/{orderId} endpoint returns a 200 and provides the order details
 
 **Actual results:-**
+
 The GET /ENSEK/orders/{orderId} endpoint returns a 500 error
 
 **Notes:-**
+
 All other GET end points appear to function correctly (without authentication) there is no reason to suppose this one should not as well.
 
 
@@ -242,12 +267,15 @@ All other GET end points appear to function correctly (without authentication) t
 2. Observe the advert has text indicating 30% Gas discount and an image indicating 20%
 
 **Expected results:-**
+
 Any discounts have consistent percentages
 
 **Actual results:-**
+
 The Buy Energy page indicates a discount with two conflicting percentages
 
 **Notes:-**
+
 There is no indication whether the discount has been applied or not
 The image used has a filename "/Content/Images/20-discount-Circle-1.png" but it appears there is no 30- version in the same directory
 
