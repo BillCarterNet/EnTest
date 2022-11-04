@@ -61,6 +61,7 @@ Where changed to
 The validation would work as expected
 
 It is also suggested that when more than one criteria is present to the user that each criteria should be in its own `<li>` element so it appears as a more readable list to the user
+
 The html is there but not constructed properly
 
 
@@ -118,7 +119,7 @@ The About page has a link to the production website
 **Steps to reproduce:-**
 1. Navigate to the URL https://ensekautomationcandidatetest.azurewebsites.net/Energy/Buy
 2. Click "Buy Energy"
-3. In any of the available "Energy Type" observer you can enter
+3. In any of the available "Energy Type" fields observe you can enter:
     - A negative quantity (this increases the qty available)
     - A quantity higher than that available (this decreases the available qty available below zero)
     - A decimal quantity (this prompts a crash)
